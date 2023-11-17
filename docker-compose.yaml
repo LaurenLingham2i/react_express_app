@@ -1,0 +1,5 @@
+services:
+  frontend:
+    build: ./react-app
+  backend:
+    build: ./express-app
