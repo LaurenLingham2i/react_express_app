@@ -15,17 +15,20 @@ function App() {
 
   return (
     <div className="App">
+      <h2>Current Top 10 News Articles</h2>
+      <div className="article-gird">
       {articles.map((article, index) => (
-        <ul key={index}>
+        <div key={index} className="article-card">
           <h3>
+            {index + 1}.&nbsp; 
             <a href={article.webUrl}>{article.fields.headline}</a>
           </h3>
           <img src={article.fields.thumbnail} alt=""/>
-        </ul>
+        </div>
       ))}
+    </div>
     </div>
   );
 }
-
 
 export default App;

@@ -1,5 +1,13 @@
 services:
-  frontend:
-    build: ./react-app
-  backend:
+
+  express-backend:
     build: ./express-app
+    ports:
+      - 5000:5000
+
+  react-frontend:
+    build: ./react-app
+    ports:
+      - 5173:5173
+    # depends_on:
+    #   - express-backend

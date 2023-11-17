@@ -2,8 +2,8 @@ FROM node:21
 
 WORKDIR /express-app
 
-COPY package*.json ./
-RUN npm install
+COPY package*.json .
+RUN npm i
 COPY . .
 
 EXPOSE 5000
